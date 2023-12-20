@@ -9,13 +9,13 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  max-block-size: 100%;
   margin: 0 auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  max-block-size: 100%;
 }
 
 h1,
@@ -38,27 +38,28 @@ ol {
 }
 
 .content {
-  block-size: 800px;
-  padding-block-start: 133px;
-  padding-block-end: 133px;
-  padding-inline-start: 30px;
-  padding-inline-end: 30px;
-  overflow: hidden;
   display: flex;
   align-items: end;
   gap: 30px;
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
+  padding-block-start: 133px;
+  padding-block-end: 133px;
+  overflow: hidden;
+  block-size: 800px;
 }
 
 .search-form {
   display: flex;
-  align-items: end;
   justify-content: space-between;
+  align-items: end;
   gap: 40px;
 }
 
 .content__list {
-  max-block-size: 410px;
+  position: relative;
   overflow-y: scroll;
+  max-block-size: 410px;
 }
 
 .content__details {
@@ -81,15 +82,16 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
+  margin-block-end: 16px;
   inline-size: 711px;
   block-size: 386px;
-  margin-block-end: 16px;
 }
 
 .result__video {
+  object-fit: cover;
   block-size: 100%;
   inline-size: 100%;
-  object-fit: cover;
 }
 
 .content__list-item:not(:last-child) {
