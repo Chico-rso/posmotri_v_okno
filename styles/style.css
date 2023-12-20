@@ -187,7 +187,7 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus-visible {
+.search-form__textfield:has:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -219,11 +219,10 @@ ol {
 
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
   content: '';
-  position: absolute;
   display: block;
+  margin-inline-start: 1px;
+  margin-block-start: 1px;
   background-color: #fff;
-  inset-block-start: 1px;
-  inset-inline-start: 1px;
   block-size: 90%;
   inline-size: 88%;
 }
