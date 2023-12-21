@@ -31,6 +31,7 @@ ol {
   list-style: none;
 }
 
+.search-form__label,
 .button {
   cursor: pointer;
 }
@@ -47,8 +48,8 @@ ol {
 
 .page {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -73,7 +74,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: start;
   gap: 40px;
 }
 
@@ -103,6 +104,7 @@ ol {
 
 .content__video-card-thumbnail {
   object-fit: cover;
+  object-position: center;
   block-size: 103px;
   inline-size: 194px;
 }
@@ -135,6 +137,7 @@ ol {
 
 .result__video {
   object-fit: cover;
+  object-position: center;
   block-size: 100%;
   inline-size: 100%;
 }
@@ -166,8 +169,8 @@ ol {
 }
 
 .search-form__fieldset:first-child .search-form__label:active {
-  border-inline-end: 1px solid #fff;
   border-inline-start: 1px solid #fff;
+  border-inline-end: 1px solid #fff;
 }
 
 .search-form__fieldset:nth-child(2) {
@@ -175,32 +178,34 @@ ol {
 }
 
 .search-form__fieldset {
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 22px;
 }
 
 .search-form__fieldset-title {
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
   margin-block-end: 5px;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .search-form__textfield {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
   display: block;
   border: none;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
   padding-inline-end: 10px;
   color: #FFFFFFB2;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
   background-color: transparent;
   inline-size: 225px;
   block-size: 27px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -208,7 +213,7 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus-visible {
+.search-form__textfield:focus-within {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -221,7 +226,6 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
 .search-form__label:hover {
@@ -260,11 +264,11 @@ ol {
 .button {
   border: 1px solid #fff;
   color: #fff;
-  background-color: transparent;
-  font-weight: 700;
   font-family: inherit;
-  line-height: 21px;
+  font-weight: 700;
   font-size: 18px;
+  line-height: 21px;
+  background-color: transparent;
 }
 
 .button:active {
@@ -291,17 +295,14 @@ ol {
 }
 
 .search-form__submit-button {
+  align-self: flex-end;
   block-size: 34px;
   min-inline-size: 194px;
 }
 
-.search-form__submit-button:focus {
-  outline: none;
-}
-
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+.content__video-card-description-container {
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .content__video-card-description-container:hover {
