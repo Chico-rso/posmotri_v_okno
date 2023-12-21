@@ -8,16 +8,6 @@ html {
   block-size: 100%;
 }
 
-.page {
-  margin: 0 auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
-  inline-size: 1200px;
-  max-block-size: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -55,16 +45,29 @@ ol {
   white-space: nowrap;
 }
 
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
+}
+
 .content {
   display: flex;
   align-items: end;
   gap: 30px;
-  padding-inline-start: 30px;
-  padding-inline-end: 30px;
-  padding-block-start: 133px;
-  padding-block-end: 133px;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
+  margin-block-start: 133px;
+  margin-block-end: 133px;
   overflow: hidden;
-  block-size: 800px;
+  inline-size: 1140px;
 }
 
 .search-form {
@@ -99,14 +102,14 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
   block-size: 103px;
   inline-size: 194px;
-  object-fit: cover;
 }
 
 .title {
   margin-block-end: 26px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70px;
@@ -118,9 +121,14 @@ ol {
   color: #545050;
 }
 
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .result__video-container {
   position: relative;
-  margin-block-end: 16px;
   inline-size: 711px;
   block-size: 386px;
 }
@@ -142,7 +150,7 @@ ol {
 
 .content__video-card-title {
   margin-block-end: 6px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
@@ -158,24 +166,37 @@ ol {
 }
 
 .search-form__fieldset:first-child .search-form__label:active {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-inline-end: 1px solid #fff;
+  border-inline-start: 1px solid #fff;
+}
+
+.search-form__fieldset:nth-child(2) {
+  align-self: flex-start;
+}
+
+.search-form__fieldset {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .search-form__fieldset-title {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
   margin-block-end: 5px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: left;
 }
 
 .search-form__textfield {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
   display: block;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  padding-inline-end: 14px;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  padding-inline-end: 10px;
   color: #FFFFFFB2;
   background-color: transparent;
   inline-size: 225px;
@@ -187,7 +208,7 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:has:focus-visible {
+.search-form__textfield:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -205,7 +226,7 @@ ol {
 
 .search-form__label:hover {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-position: under;
 }
 
 .search-form__label:focus {
@@ -223,7 +244,7 @@ ol {
   margin-inline-start: 1px;
   margin-block-start: 1px;
   background-color: #fff;
-  block-size: 90%;
+  block-size: 89%;
   inline-size: 88%;
 }
 
@@ -240,6 +261,33 @@ ol {
   border: 1px solid #fff;
   color: #fff;
   background-color: transparent;
+  font-weight: 700;
+  font-family: inherit;
+  line-height: 21px;
+  font-size: 18px;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.more-button {
+  inline-size: 100%;
+  block-size: 34px;
 }
 
 .search-form__submit-button {
@@ -256,29 +304,9 @@ ol {
   outline-offset: 1px;
 }
 
-.button:active {
-  background-color: #545050;
-}
-
-.button:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.more-button {
-  inline-size: 100%;
-  block-size: 34px;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
 .content__video-card-description-container:hover {
   text-decoration: underline;
-  text-underline-offset: 2px;
-  text-underline-position: auto;
+  text-underline-position: under;
 }
 
 .content__video-card-description-container:focus {
@@ -300,6 +328,7 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
+  text-underline-position: under;
 }
 
 .content__card-link:focus {
