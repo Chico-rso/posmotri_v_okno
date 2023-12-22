@@ -67,7 +67,6 @@ ol {
   margin-inline-end: 30px;
   margin-block-start: 133px;
   margin-block-end: 133px;
-  overflow: hidden;
   inline-size: 1140px;
 }
 
@@ -84,13 +83,14 @@ ol {
   padding-inline-end: 2px;
   padding-block-start: 2px;
   padding-block-end: 2px;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-block-size: 298px;
 }
 
 .content__details {
   block-size: 100%;
   inline-size: 100%;
+  align-self: flex-start;
 }
 
 .content__video-card {
@@ -105,7 +105,7 @@ ol {
 .content__video-card-thumbnail {
   object-fit: cover;
   object-position: center;
-  block-size: 103px;
+  min-block-size: 103px;
   inline-size: 194px;
 }
 
@@ -114,7 +114,7 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 70px;
+  line-height: 0.94;
   text-align: left;
   text-transform: uppercase;
 }
@@ -156,8 +156,9 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 0.94;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
@@ -180,14 +181,14 @@ ol {
 .search-form__fieldset {
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 0.94;
 }
 
 .search-form__fieldset-title {
   margin-block-end: 5px;
   font-weight: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 0.94;
 }
 
 .search-form__textfield {
@@ -200,7 +201,7 @@ ol {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 0.94;
   background-color: transparent;
   inline-size: 225px;
   block-size: 27px;
@@ -254,7 +255,7 @@ ol {
 
 .search-form__pseudo-checkbox {
   position: relative;
-  display: inline-block;
+  display: flex;
   margin-inline-end: 5px;
   border: 1px solid #fff;
   block-size: 19px;
@@ -267,7 +268,7 @@ ol {
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 0.94;
   background-color: transparent;
 }
 
@@ -301,8 +302,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  block-size: 100%;
-  inline-size: 100%;
+  flex-grow: 1;
 }
 
 .content__video-card-description-container:hover {
